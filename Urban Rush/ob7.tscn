@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://ob7.gd" type="Script" id=1]
+[ext_resource path="res://ob7.png" type="Texture" id=2]
+
+[node name="ob7" type="KinematicBody2D"]
+position = Vector2( 336, 40 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true,
+"_edit_horizontal_guides_": [  ],
+"_edit_vertical_guides_": [  ]
+}
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 32, 0 )
+texture = ExtResource( 2 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PoolVector2Array( 16, -16, 16, -64, -16, -64, -16, 64, 80, 64, 80, 32, 16, 32 )

@@ -1,0 +1,21 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://ob1.gd" type="Script" id=1]
+[ext_resource path="res://ob1.png" type="Texture" id=2]
+
+[node name="ob1" type="KinematicBody2D" groups=[
+"obstacle",
+]]
+position = Vector2( 400, 80 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true,
+"_edit_horizontal_guides_": [  ],
+"_edit_vertical_guides_": [  ]
+}
+
+[node name="Sprite" type="Sprite" parent="."]
+texture = ExtResource( 2 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PoolVector2Array( -16, -16, -16, 16, -80, 16, -80, 48, 80, 48, 80, -16 )

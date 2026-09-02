@@ -1,0 +1,180 @@
+[gd_scene load_steps=20 format=2]
+
+[ext_resource path="res://exit_button.png" type="Texture" id=1]
+[ext_resource path="res://play_button.png" type="Texture" id=2]
+[ext_resource path="res://music_on_button.png" type="Texture" id=3]
+[ext_resource path="res://options_button.png" type="Texture" id=4]
+[ext_resource path="res://Gamer.ttf" type="DynamicFontData" id=5]
+[ext_resource path="res://main_menu.gd" type="Script" id=6]
+[ext_resource path="res://scene_transition_rect.tscn" type="PackedScene" id=7]
+[ext_resource path="res://music_off_button.png" type="Texture" id=8]
+[ext_resource path="res://logo.png" type="Texture" id=9]
+[ext_resource path="res://options_button_pushed.png" type="Texture" id=10]
+[ext_resource path="res://play_button_pushed.png" type="Texture" id=11]
+[ext_resource path="res://exit_button_pushed.png" type="Texture" id=12]
+[ext_resource path="res://background1.png" type="Texture" id=13]
+[ext_resource path="res://dj sfx.ogg" type="AudioStream" id=14]
+[ext_resource path="res://main_menu.ogg" type="AudioStream" id=15]
+[ext_resource path="res://majin.png" type="Texture" id=16]
+[ext_resource path="res://volume_slider.gd" type="Script" id=17]
+
+[sub_resource type="DynamicFont" id=1]
+size = 32
+font_data = ExtResource( 5 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 48
+font_data = ExtResource( 5 )
+
+[node name="Control" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 6 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="background" type="TextureRect" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
+
+[node name="TextureRect" type="TextureRect" parent="background"]
+margin_right = 640.0
+margin_bottom = 320.0
+texture = ExtResource( 13 )
+
+[node name="logo" type="TextureRect" parent="background"]
+margin_left = 200.0
+margin_top = 8.0
+margin_right = 464.0
+margin_bottom = 144.0
+rect_scale = Vector2( 0.9, 0.9 )
+texture = ExtResource( 9 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="play_button" type="TextureButton" parent="background"]
+margin_left = 296.0
+margin_top = 152.0
+margin_right = 344.0
+margin_bottom = 200.0
+toggle_mode = true
+texture_normal = ExtResource( 2 )
+texture_pressed = ExtResource( 11 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="options_button" type="TextureButton" parent="background"]
+margin_left = 296.0
+margin_top = 208.0
+margin_right = 344.0
+margin_bottom = 256.0
+texture_normal = ExtResource( 4 )
+texture_pressed = ExtResource( 10 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="exit_button" type="TextureButton" parent="background"]
+margin_left = 296.0
+margin_top = 264.0
+margin_right = 344.0
+margin_bottom = 312.0
+texture_normal = ExtResource( 1 )
+texture_pressed = ExtResource( 12 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="music_button" type="TextureButton" parent="background"]
+margin_left = 584.0
+margin_top = 8.0
+margin_right = 632.0
+margin_bottom = 56.0
+toggle_mode = true
+texture_normal = ExtResource( 3 )
+texture_pressed = ExtResource( 8 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="dj_sfx" type="AudioStreamPlayer" parent="background/music_button"]
+stream = ExtResource( 14 )
+volume_db = -15.266
+pitch_scale = 2.13
+
+[node name="info" type="Label" parent="background"]
+margin_left = 8.0
+margin_top = 288.0
+margin_right = 124.0
+margin_bottom = 314.0
+custom_fonts/font = SubResource( 1 )
+text = "Version 0.1"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="scene_transition_rect" parent="." instance=ExtResource( 7 )]
+
+[node name="BGM" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 15 )
+
+[node name="options_popup" type="Popup" parent="."]
+margin_right = 640.0
+margin_bottom = 320.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="background" type="TextureRect" parent="options_popup"]
+margin_right = 640.0
+margin_bottom = 320.0
+texture = ExtResource( 16 )
+
+[node name="Label" type="Label" parent="options_popup"]
+margin_left = 256.0
+margin_top = 72.0
+margin_right = 385.0
+margin_bottom = 110.0
+custom_fonts/font = SubResource( 2 )
+text = "OPTIONS"
+align = 1
+valign = 1
+
+[node name="close_options" type="TextureButton" parent="options_popup"]
+margin_left = 296.0
+margin_top = 248.0
+margin_right = 344.0
+margin_bottom = 296.0
+texture_normal = ExtResource( 1 )
+texture_pressed = ExtResource( 12 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="volume_slider" type="HSlider" parent="options_popup"]
+margin_left = 248.0
+margin_top = 144.0
+margin_right = 392.0
+margin_bottom = 160.0
+max_value = 1.0
+step = 0.05
+script = ExtResource( 17 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="pressed" from="background/play_button" to="." method="_on_play_button_pressed"]
+[connection signal="pressed" from="background/options_button" to="." method="_on_options_button_pressed"]
+[connection signal="pressed" from="background/exit_button" to="." method="_on_exit_button_pressed"]
+[connection signal="pressed" from="background/music_button" to="." method="_on_music_button_pressed"]
+[connection signal="pressed" from="options_popup/close_options" to="." method="_on_close_options_pressed"]
+[connection signal="mouse_exited" from="options_popup/volume_slider" to="options_popup/volume_slider" method="release_focus"]
+[connection signal="value_changed" from="options_popup/volume_slider" to="options_popup/volume_slider" method="_on_value_changed"]
