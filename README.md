@@ -8,7 +8,7 @@ The project was developed using **GDScript** and **Godot Engine 3.3.0**, with a 
 
 ---
 
-## 🎮 Gameplay
+## Gameplay
 
 <!-- VISUAL HOOK: Replace with a gameplay GIF or short looping video -->
 
@@ -30,17 +30,17 @@ The player remains positioned near the left side of the screen while obstacles, 
 
 ---
 
-## 🎬 Demo
+## <img width="32" height="" alt="play_button" src="https://github.com/user-attachments/assets/1ba6968a-ba15-4411-8280-0f2f1fb83660" />  Demo
 
 <!-- VISUAL HOOK: Replace with an embedded/linked YouTube demo -->
 
 <!-- Current demo: https://youtu.be/uZKlq3bKC1Q -->
 
-**[▶ Watch the gameplay demo](https://youtu.be/uZKlq3bKC1Q)**
+**[Watch the gameplay demo](https://youtu.be/uZKlq3bKC1Q)**
 
 ---
 
-## ✨ Features
+## <img width="32" height="32" alt="options_button" src="https://github.com/user-attachments/assets/ba5e003a-21b6-4498-99e7-d5170754b09e" /> Features
 
 ### Gameplay
 
@@ -77,7 +77,7 @@ The player remains positioned near the left side of the screen while obstacles, 
 
 ---
 
-## 🕹️ Controls
+## <img width="32" height="32" alt="action_button_pressed" src="https://github.com/user-attachments/assets/89ac9d61-ffcc-4c9a-8d0a-79e66b71e184" /> Controls
 
 | Action                        | Control                   |
 | ----------------------------- | ------------------------- |
@@ -87,7 +87,7 @@ The player remains positioned near the left side of the screen while obstacles, 
 
 ---
 
-## 🧠 Technical Highlights
+## Technical Highlights
 
 Urban Rush was built around a simple but complete gameplay loop:
 
@@ -128,7 +128,7 @@ The best score is stored locally using Godot's `user://` storage system, allowin
 
 ---
 
-## 🎨 Visual Design
+## <img width="32" height="32" alt="ob5" src="https://github.com/user-attachments/assets/78465a1d-6eb3-4fab-acd6-61820bcc3603" /> Visual Design
 
 <!-- VISUAL HOOK: Add a screenshot showing the complete game environment -->
 
@@ -144,9 +144,10 @@ The project uses a pixel-art aesthetic throughout its characters, environment, U
 
 <img width="240" height="" alt="player1" src="https://github.com/user-attachments/assets/3c8074b3-e5ff-42c5-b0dd-aebbbda83b0d" />
 
+
 ---
 
-## 🛠️ Built With
+## <img width="32" height="32" alt="icon" src="https://github.com/user-attachments/assets/1bb3d739-ad6c-4430-8769-85e17038e206" /> Built With
 
 * **Godot Engine 3.3.0**
 * **GDScript**
@@ -156,7 +157,7 @@ The project uses a pixel-art aesthetic throughout its characters, environment, U
 
 ---
 
-## 📁 Project Structure
+## Project Structure
 
 ```text
 Urban-Rush/
@@ -179,7 +180,7 @@ The main gameplay logic is distributed across scene-specific scripts, while reus
 
 ---
 
-## 📚 Project Context
+## Project Context
 
 Urban Rush was created as a hands-on project to explore game development with Godot and GDScript.
 
