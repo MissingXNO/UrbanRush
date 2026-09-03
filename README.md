@@ -14,7 +14,7 @@ The project was developed using **GDScript** and **Godot Engine 3.3.0**, with a 
 
 <!-- Suggested: 960×480 GIF showing the player jumping, sliding and collecting coins -->
 
-![Gameplay Preview](docs/media/gameplay.gif)
+<img width="480" height="" alt="ur" src="https://github.com/user-attachments/assets/55bc7636-750f-47e7-bb07-d94ca77b4ae7" />
 
 The player remains positioned near the left side of the screen while obstacles, coins and environmental elements move toward them.
 
@@ -27,6 +27,16 @@ The player remains positioned near the left side of the screen while obstacles, 
 * React to different obstacle configurations.
 * Survive as long as possible to increase the score.
 * The game ends when the player collides with an obstacle.
+
+---
+
+## 🎬 Demo
+
+<!-- VISUAL HOOK: Replace with an embedded/linked YouTube demo -->
+
+<!-- Current demo: https://youtu.be/uZKlq3bKC1Q -->
+
+**[▶ Watch the gameplay demo](https://youtu.be/uZKlq3bKC1Q)**
 
 ---
 
@@ -124,7 +134,7 @@ The best score is stored locally using Godot's `user://` storage system, allowin
 
 <!-- Suggested: Main gameplay screenshot, ideally without UI overlays -->
 
-![Game Environment](docs/media/environment.png)
+<img width="480" height="" alt="background1" src="https://github.com/user-attachments/assets/edc3f848-5123-45e0-bd25-1499087557e0" />
 
 The project uses a pixel-art aesthetic throughout its characters, environment, UI and animations.
 
@@ -132,17 +142,7 @@ The project uses a pixel-art aesthetic throughout its characters, environment, U
 
 <!-- Suggested: run / jump / fall / slide -->
 
-![Player Animation States](docs/media/player-states.png)
-
----
-
-## 🎬 Demo
-
-<!-- VISUAL HOOK: Replace with an embedded/linked YouTube demo -->
-
-<!-- Current demo: https://youtu.be/uZKlq3bKC1Q -->
-
-**[▶ Watch the gameplay demo](https://youtu.be/uZKlq3bKC1Q)**
+<img width="240" height="" alt="player1" src="https://github.com/user-attachments/assets/3c8074b3-e5ff-42c5-b0dd-aebbbda83b0d" />
 
 ---
 
